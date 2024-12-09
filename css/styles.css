@@ -610,9 +610,7 @@ img {
     opacity: 0;
     visibility: hidden;
     transform: scale(0.95);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -639,6 +637,15 @@ img {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-close {
     position: absolute;
     top: 24px;
@@ -661,6 +668,7 @@ img {
 .modal-close:focus {
     background-color: #404bbf;
     border: none;
+    fill: #ffffff
 }
 
 .modal-title {
@@ -673,9 +681,24 @@ img {
     color: #2e2f42;
 }
 
+.form-group {
+    margin-bottom: 8px;
+}
+
+.form-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: block;
+    margin-bottom: 4px;
+    position: relative;
+}
+
 .form-input,
 .form-textarea {
     width: 100%;
+    margin-bottom: 16px;
     height: 40px;
     font-size: 12px;
     line-height: 1.17;
@@ -692,11 +715,13 @@ img {
 .form-input:focus,
 .form-textarea:focus {
     border-color: #4d5ae5;
+    fill: #4D5AE5;
 }
 
-textarea {
+.form-textarea {
     height: 120px;
     resize: none;
+    padding: 8px 16px;
 }
 
 .checkbox-custom {
@@ -706,6 +731,7 @@ textarea {
     border-radius: 2px;
     display: inline-flex;
     align-items: center;
+    fill: transparent;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -715,13 +741,26 @@ textarea {
 input[type="checkbox"]:checked+.checkbox-custom {
     background-color: #404bbf;
     border: none;
-}
-
-input[type="checkbox"]:checked+.checkbox-custom svg {
     fill: #f4f4fd;
 }
 
+.checkbox-group {
+    margin-bottom: 24px;
+}
+
+.checkbox-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.privacy-link {
+    color: #4d5ae5;
+}
+
 .modal-submit {
+    display: block;
     min-width: 169px;
     height: 56px;
     font-weight: 500;
