@@ -419,6 +419,31 @@
         </div>
     </footer>
 
+    <!-- Modal window -->
+    <div class="backdrop">
+        <div class="modal">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2>Submit your application</h2>
+            <form class="application-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email-application">Your Email:</label>
+                <input type="email" id="email-application" name="email" placeholder="Enter your email" required>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" name="license" id="license" hidden>
+                    <svg class="checkbox-icon">
+                        <use href="./images/icons.svg#icon-checkbox"></use>
+                    </svg>
+                    I accept the terms of the license agreement
+                </label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 
 </html>
