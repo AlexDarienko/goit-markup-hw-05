@@ -720,7 +720,7 @@ img {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus,
+.form-input:focus + .form-icon,
 .form-textarea:focus {
     border-color: #4d5ae5;
     fill: #4D5AE5;
@@ -769,6 +769,8 @@ input[type="checkbox"]:checked+.checkbox-label .checkbox-custom {
 
 .modal-submit {
     display: block;
+    text-align: center;
+    align-self: center;
     min-width: 169px;
     height: 56px;
     font-weight: 500;
