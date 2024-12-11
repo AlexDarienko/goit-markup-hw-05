@@ -715,7 +715,6 @@ img {
 .form-input,
 .form-textarea {
     width: 100%;
-    margin-bottom: 16px;
     height: 40px;
     font-size: 12px;
     line-height: 1.17;
